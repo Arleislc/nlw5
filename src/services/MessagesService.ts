@@ -8,7 +8,7 @@ interface IMessageCreate {
   user_id: string;
 }
 
-class MessageService {
+class MessagesService {
 
   private messagesRepository: Repository<Message>;
 
@@ -42,4 +42,4 @@ class MessageService {
   }
 }
 
-export { MessageService };
+export { MessagesService };
