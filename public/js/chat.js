@@ -54,6 +54,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
   });
 
   socket.on("admin_send_to_client", (message) => {
+
     socket_admin_id = message.socket_id;
 
     const template_admin = document.getElementById("admin-template").innerHTML;
@@ -76,6 +77,7 @@ document
       socket_admin_id,
     };
 
+    console.log("params:", params)
     socket.emit("client_send_to_admin", params);
 
     const template_client = document.getElementById("message-user-template")
